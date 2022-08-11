@@ -1,1 +1,1 @@
-# strandgarten-emplyee-planning
+# strandgarten-employee-planning
