@@ -1,0 +1,28 @@
+version: '3.9'
+
+services:
+  portainer_mgmgt:
+    image: portainer/portainer-ce:2.14.2
+    container_name: portainer_mgmt
+    restart: on-failure
+    ports:
+      - '8000:8000'
+      - '9443:9443'
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./resources/portainer_data:/data
+      - ./resources/certs:/certs
+    # this option is only needed if no nginx container is deployed and you will use ssl
+    command: ['--sslcert', '/certs/portainer.crt', '--sslkey', '/certs/portainer.key']
+
+  mongodb:
+    image: mongo:5.0.10
+    container_name: mongodb
+    restart: on-failure
+    ports:
+      - '27017:27017'
+    volumes:
+      - ./resources/mongodb_data:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=admin_password
