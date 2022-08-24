@@ -1,5 +1,4 @@
 version: '3.9'
-
 services:
   portainer_mgmgt:
     image: portainer/portainer-ce:2.14.2
