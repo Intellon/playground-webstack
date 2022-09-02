@@ -18,3 +18,7 @@ npm run build
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 https://www.youtube.com/watch?v=j55fHUJqtyw
+
+https://levelup.gitconnected.com/how-to-add-swagger-ui-to-existing-node-js-and-express-js-project-2c8bad9364ce
+https://github.com/kirti/restful-api-node-express-crud
+https://www.npmjs.com/package/swagger-ui-express
